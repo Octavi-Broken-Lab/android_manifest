@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github remote -->
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <remote name="octavi"
+          fetch="https://github.com/Octavi-Broken-Lab/"
+          revision="wip" />
+
+  <!-- octavi Repos -->
+
+  <!-- General -->
+  <project path="art" name="android_art" remote="octavi" />
+  <project path="build/make" name="android_build_make" remote="octavi">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="octavi">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bionic" name="android_bionic" remote="octavi"/>
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="octavi"/>
+  <project path="build/blueprint" name="android_build_blueprint" remote="octavi"/>
+  <project path="libcore" name="android_libcore" remote="octavi" /> 
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="octavi"/>
+  <project path="frameworks/base" name="android_frameworks_base" remote="octavi"/>
+  <project path="frameworks/native" name="android_frameworks_native" remote="octavi"/>
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="octavi" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="octavi" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="octavi" />
+
+  <!-- External -->
+  <project path="external/angle" name="android_external_angle" remote="octavi" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="octavi" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc-new" remote="octavi" />
+  <project path="external/libjpeg-turbo" name="android_external_libjpeg-turbo" remote="octavi" />
+  <project path="external/libpng" name="android_external_libpng" remote="octavi" />
+  <project path="external/kernel-headers" name="android_external_kernel-headers" remote="octavi" />
+  <project path="external/libhevc" name="android_external_libhevc" remote="octavi" />
+  <project path="external/selinux" name="android_external_selinux" remote="octavi" />
+  <project path="external/skia" name="android_external_skia" remote="octavi" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="octavi" />
+  <project path="external/zlib" name="android_external_zlib" remote="octavi" />
+  <project path="external/tinycompress" name="android_external_tinycompress" remote="octavi"/>
+
+  <!-- Device -->
+  <project path="device/octavi/sepolicy" name="android_device_octavi_sepolicy" remote="octavi" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="octavi" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" remote="octavi" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="octavi"/>
+  <project path="hardware/octavi/interfaces" name="android_hardware_octavi_interfaces" remote="octavi"/>
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="octavi"/>
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="octavi"/>
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="octavi" >
+        <!-- add guards for CAF repositories -->
+  <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+  <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+  <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+  </project>
+
+  <!-- System -->
+  <project path="system/bt" name="android_system_bt" remote="octavi"/>
+  <project path="system/core" name="android_system_core" remote="octavi"/>
+  <project path="system/vold" name="android_system_vold" remote="octavi"/>
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="octavi"/>
+  <project path="system/tools/hidl" name="android_system_tools_hidl" remote="octavi"/>
+
+  <!-- Package -->
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="octavi" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="octavi" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="octavi" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="octavi" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="octavi" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="octavi" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/abi-dumps/vndk" name="android_prebuilts_abi-dumps_vndk" remote="octavi" />
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="octavi" />
+  <project path="prebuilts/r8" name="android_prebuilts_r8" remote="octavi" />
+
+  <!-- Vendor -->
+  <project path="vendor/octavi" name="android_vendor_octavi" remote="octavi" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="octavi" />
+  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="octavi" />
+
+</manifest>
