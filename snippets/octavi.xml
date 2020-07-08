@@ -51,6 +51,7 @@
   <project path="external/skia" name="android_external_skia" remote="octavi" />
   <project path="external/sqlite" name="android_external_sqlite" remote="octavi" />
   <project path="external/zlib" name="android_external_zlib" remote="octavi" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="octavi" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="octavi"/>
 
   <!-- Device -->
@@ -63,6 +64,7 @@
   <project path="hardware/octavi/interfaces" name="android_hardware_octavi_interfaces" remote="octavi"/>
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="octavi"/>
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="octavi"/>
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="octavi" />
   <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="octavi" >
         <!-- add guards for CAF repositories -->
   <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
@@ -97,5 +99,7 @@
   <project path="vendor/octavi" name="android_vendor_octavi" remote="octavi" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="octavi" />
   <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="octavi" />
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="octavi" />
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="octavi" />
 
 </manifest>
