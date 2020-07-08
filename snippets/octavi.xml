@@ -67,12 +67,21 @@
   <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="octavi" />
   <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="octavi" >
         <!-- add guards for CAF repositories -->
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8960/Android.mk" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
   <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
   <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
   <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
   <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
   <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
   <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+  <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+  <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
   </project>
 
   <!-- System -->
