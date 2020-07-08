@@ -61,7 +61,6 @@
     <project path="prebuilts/tools-octavi" name="android_prebuilts_tools-lineage" remote="lineage" clone-depth="1" />
 
     <!-- Packages -->
-    <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="lineage" />
     <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="lineage" />
 
 </manifest>
