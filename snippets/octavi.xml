@@ -22,7 +22,7 @@
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="octavi" />
 
   <!-- Build -->
-  <project path="build/make" name="platform_build" groups="pdk" remote="octavi" >
+  <project path="build/make" name="platform_build_make" groups="pdk" remote="octavi" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
