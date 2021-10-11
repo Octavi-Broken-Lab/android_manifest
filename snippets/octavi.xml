@@ -15,14 +15,14 @@
            fetch="https://gitlab.com"/>
 
   <!-- Rootdir -->
-  <project path="bionic" name="android_bionic" groups="pdk" remote="octavi" />
-  <project path="manifest" name="android_manifest" remote="octavi" />
+  <project path="bionic" name="platform_bionic" groups="pdk" remote="octavi" />
+  <project path="manifest" name="platform_manifest" remote="octavi" />
 
   <!-- Bootable -->
-  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="octavi" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="octavi" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" groups="pdk" remote="octavi" >
+  <project path="build/make" name="platform_build" groups="pdk" remote="octavi" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -31,44 +31,44 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="octavi" >
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="octavi" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Device -->
-  <project path="device/octavi/sepolicy" name="android_device_octavi_sepolicy" remote="octavi" />
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="octavi" />
+  <project path="device/octavi/sepolicy" name="platform_device_octavi_sepolicy" remote="octavi" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="octavi" />
 
   <!-- External -->
-  <project path="external/selinux" name="android_external_selinux" groups="pdk" remote="octavi" />
-  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="octavi" />
+  <project path="external/selinux" name="platform_external_selinux" groups="pdk" remote="octavi" />
+  <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="octavi" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="android_frameworks_av" remote="octavi" />
-  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="octavi" />
-  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="octavi" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="octavi" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="octavi" />
+  <project path="frameworks/av" name="platform_frameworks_av" remote="octavi" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="octavi" />
+  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" remote="octavi" />
+  <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="octavi" />
+  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="octavi" />
 
   <!-- Hardware -->
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="octavi" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="octavi" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="octavi" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="octavi" />
 
   <!-- Packages -->
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="octavi" />
-  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="octavi" />
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="octavi" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="octavi" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="octavi" />
+  <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="octavi" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="octavi" />
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="octavi" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" groups="pdk" remote="octavi" />
-  <project path="system/netd" name="android_system_netd" remote="octavi" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="octavi" />
-  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="octavi" />
-  <project path="system/vold" name="android_system_vold" groups="pdk" remote="octavi" />
+  <project path="system/core" name="platform_system_core" groups="pdk" remote="octavi" />
+  <project path="system/netd" name="platform_system_netd" remote="octavi" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="octavi" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="octavi" />
+  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="octavi" />
 
   <!-- Vendor -->
-  <project path="vendor/octavi" name="android_vendor_octavi" remote="octavi" />
+  <project path="vendor/octavi" name="platform_vendor_octavi" remote="octavi" />
 
 </manifest>
